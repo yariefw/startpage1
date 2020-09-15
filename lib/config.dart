@@ -1,50 +1,15 @@
 import 'package:flutter/material.dart';
 import 'uielement.dart';
 
-String wallpaper =
-    "https://static.zerochan.net/Tobisawa.Misaki.full.2496556.jpg";
-
-class ButtonLinksMenu extends StatelessWidget {
+class Wallpaper extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Column(
-        children: <Widget>[
-          Row(
-            children: <Widget>[
-              ButtonLink(
-                text: "Facebook",
-                url: "https://facebook.com/",
-              ),
-              ButtonLink(
-                text: "Reddit",
-                url: "https://reddit.com/",
-              ),
-              ButtonLink(
-                text: "Youtube",
-                url: "https://youtube.com/",
-              ),
-            ],
-          ),
-          Row(
-            children: <Widget>[
-              ButtonLink(
-                text: "Kureha",
-                url: "http://www.vn-meido.com/k1/",
-              ),
-              ButtonLink(
-                text: "HorribleSubs",
-                url: "https://horriblesubs.info/",
-              ),
-              ButtonLink(
-                text: "Nyaa",
-                url: "http://nyaa.si/",
-              ),
-            ],
-          ),
-        ],
-      ),
-    );
+    // source is https://www.zerochan.net/2496556
+    //
+    // return Image.network(
+    //   "https://static.zerochan.net/Tobisawa.Misaki.full.2496556.jpg",
+    // );
+    return Image.asset('assets/bg.jpg');
   }
 }
 
@@ -93,7 +58,7 @@ class BigIconsMenu extends StatelessWidget {
                 ),
                 BigIconLink(
                   icon: Icons.assignment_ind,
-                  text: "Class",
+                  text: "Classes",
                   url: "https://classroom.google.com/u/0/",
                 ),
                 BigIconLink(
@@ -105,6 +70,50 @@ class BigIconsMenu extends StatelessWidget {
             ),
           ],
         ),
+      ),
+    );
+  }
+}
+
+class ButtonLinksMenu extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: Column(
+        children: <Widget>[
+          Row(
+            children: <Widget>[
+              ButtonLink(
+                text: "Facebook",
+                url: "https://facebook.com/",
+              ),
+              ButtonLink(
+                text: "Reddit",
+                url: "https://reddit.com/",
+              ),
+              ButtonLink(
+                text: "Youtube",
+                url: "https://youtube.com/",
+              ),
+            ],
+          ),
+          Row(
+            children: <Widget>[
+              ButtonLink(
+                text: "Kureha",
+                url: "http://www.vn-meido.com/k1/",
+              ),
+              ButtonLink(
+                text: "HorribleSubs",
+                url: "https://horriblesubs.info/",
+              ),
+              ButtonLink(
+                text: "Nyaa",
+                url: "http://nyaa.si/",
+              ),
+            ],
+          ),
+        ],
       ),
     );
   }

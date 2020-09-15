@@ -44,9 +44,7 @@ class HomepageState extends State<Homepage> {
               width: constraints.maxWidth, //1280
               child: FittedBox(
                 fit: BoxFit.cover,
-                child: Image.network(
-                  wallpaper,
-                ),
+                child: Wallpaper(),
               ),
             ),
             Container(
