@@ -18,7 +18,7 @@ class BigIconLink extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        js.context.callMethod("open", [url]);
+        js.context.callMethod("open", [url, "_self"]);
       },
       child: Container(
           padding:
@@ -85,7 +85,7 @@ class ButtonLink extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        js.context.callMethod("open", [url]);
+        js.context.callMethod("open", [url, "_self"]);
       },
       child: Container(
         padding: EdgeInsets.all(MediaQuery.of(context).size.width / 128), // 10
